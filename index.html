@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Mercadolibre.com</title>
+
+<link rel="stylesheet" type="text/css" href='/css/reset.css'/>
+<link rel="stylesheet" type="text/css" href='/css/styles.css'/>
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="logo"></div>
+    <form method="get" class="frm" id="frmSearch">
+      <input type="text" id="txtSearchBox" name="q" placeholder="Nunca dejes de buscar" class="searchbox" disabled>
+      <button type="submit" class="btnSubmit" />
+    </form>
+  </header>
+
+  <div id="container"></div>
+
+  <script data-main="js/app" src="/js/require.js"></script>
+  <script type="text/javascript">
+    require.config({
+      baseUrl: 'js',
+      paths: {
+        'jquery': "https://code.jquery.com/jquery-3.2.1.min",
+        'underscore': 'http://underscorejs.org/underscore-min',
+        'backbone': 'http://backbonejs.org/backbone-min',
+      },
+      "shim": {
+        'backbone': {
+            'deps': ['underscore', 'jquery'],
+            exports: 'Backbone'
+        },
+        'underscore': {
+            exports: '_'
+        },
+        'app': {
+          'deps': ['backbone']
+        }
+      },
+      onError: function (err) {
+         if (err.stack) {
+           console.log(err.stack);
+         }
+      },
+      callback: function () {
+        document.getElementById("txtSearchBox").disabled = false;
+      }
+    });
+  </script>
+</body>
+
+</html>

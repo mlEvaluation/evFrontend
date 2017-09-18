@@ -1,0 +1,72 @@
+
+.searchResults {
+
+  .searchItem {
+    cursor: pointer;
+    background-color: white;
+    padding: $padding-s;
+    border-bottom: 1px solid $light-grey;
+    @include clearfix;
+
+    .imageContainer {
+      position: relative;
+      width: 180px;
+      height: 180px;
+      padding-right: $padding-s;
+      float: left;
+      border-radius: 4px;
+
+      .image {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .itemInfo {
+      display: inline-block;
+      margin-top: $padding-l;
+      float: left;
+
+      .price {
+        padding-bottom: $padding-l;
+        font-size: $font-l;
+
+        .freeShipping {
+          display: inline-block;
+          background: url(/images/ic_shipping.png) no-repeat;
+          background-size: contain;
+          width: 18px;
+          height: 18px;
+          margin-left: 10px;
+
+          @media only screen and (-o-min-device-pixel-ratio: 5/4),
+               only screen and (-webkit-min-device-pixel-ratio: 1.25),
+               only screen and (min-device-pixel-ratio: 1.25),
+               only screen and (min-resolution: 1.25dppx) {
+            & { background-image: url(/images/ic_shipping@2x.png.png) }
+          }
+        }
+      }
+
+      .title {
+        font-size: $font-m;
+      }
+    }
+
+    .location {
+      display: inline-block;
+      float: right;
+      margin-right: $padding-l;
+      margin-top: 42px;
+
+      .city {
+        color: $intermediate-grey;
+        font-size: $font-xxs;
+      }
+    }
+
+  }
+
+}

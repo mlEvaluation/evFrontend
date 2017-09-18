@@ -1,0 +1,36 @@
+
+.categories {
+  padding: $padding-s 0;
+
+  ul {
+    @include clearfix;
+
+    li {
+      font-size: $font-xs;
+      color: $intermediate-grey;
+      float: left;
+      margin: 0 10px;
+
+      &:before {
+        left: -10px;
+        position: relative;
+        content: "›";
+        font-size: 22px;
+        line-height: 0px;
+      }
+
+      &:first-child {
+        margin-left: 0;
+
+        &:before {
+          content: "";
+        }
+      }
+
+      &:last-child {
+        margin-right: 0;
+        font-weight: bold;
+      }
+    }
+  }
+}

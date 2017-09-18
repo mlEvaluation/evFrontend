@@ -1,0 +1,15 @@
+{
+  "name": "mercadolibre",
+  "version": "1.0.0",
+  "description": "Mercadolibre frontend evaluation",
+  "main": "MainController.js",
+  "scripts": {
+    "compileCss": "sass scss/styles.scss static/css/styles.css",
+    "start": "node MainController.js"
+  },
+  "author": "Gonzalo Montero",
+  "dependencies": {
+    "express": "^4.15.4",
+    "unirest": "^0.5.1"
+  }
+}

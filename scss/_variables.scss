@@ -1,0 +1,26 @@
+
+$light-grey: #EEE;
+$intermediate-grey: #999;
+$dark-grey: #666;
+$yellow: #FFE600;
+$blue: #3483FA;
+$black: #333;
+
+$font-xxs: 12px;
+$font-xs: 14px;
+$font-s: 16px;
+$font-m: 18px;
+$font-l: 24px;
+$font-xl: 28px;
+$font-xxl: 46px;
+
+$padding-s: 16px;
+$padding-l: 32px;
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

@@ -1,0 +1,58 @@
+
+.navbar {
+  background-color: $yellow;
+  padding: 10px;
+  text-align: center;
+
+  .logo {
+    display: inline-block;
+    background: url(/images/Logo_ML.png) no-repeat;
+    background-size: contain;
+    width: 53px;
+    height: 36px;
+    margin-right: 25px;
+    margin-top: 3px;
+
+    @media only screen and (-o-min-device-pixel-ratio: 5/4),
+         only screen and (-webkit-min-device-pixel-ratio: 1.25),
+         only screen and (min-device-pixel-ratio: 1.25),
+         only screen and (min-resolution: 1.25dppx) {
+      & { background-image: url(/images/Logo_ML@2x.png.png) }
+    }
+  }
+
+  .frm {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 80%;
+
+    .searchbox {
+      width: 100%;
+      padding: 10px;
+      font-size: $font-m;
+      border-radius: 5px;
+      color: $black;
+    }
+
+    .btnSubmit {
+      position: absolute;
+      right: -20px;
+      top: 0;
+      height: 100%;
+      width: 45px;
+      background: $light-grey url(/images/ic_Search.png) no-repeat center;
+      background-size: 20px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+
+      @media only screen and (-o-min-device-pixel-ratio: 5/4),
+           only screen and (-webkit-min-device-pixel-ratio: 1.25),
+           only screen and (min-device-pixel-ratio: 1.25),
+           only screen and (min-resolution: 1.25dppx) {
+        & { background-image: url(/images/ic_Search@2x.png.png) }
+      }
+    }
+  }
+
+}
